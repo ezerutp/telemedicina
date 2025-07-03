@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Models;
-use App\Models\Medico;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Especialidad extends Model
 {
+    protected $table = 'especialidads';
+
     protected $fillable = [
         'nombre',
         'descripcion',
@@ -14,6 +15,6 @@ class Especialidad extends Model
 
     public function medicos()
     {
-        return $this->belongsToMany(Medico::class, 'medico_especialidad', 'especialidad_id', 'medico_id');
+        return $this->belongsToMany(User::class)->withTimestamps();
     }
 }

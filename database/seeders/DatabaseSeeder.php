@@ -16,6 +16,10 @@ class DatabaseSeeder extends Seeder
 
         // Seeders
         $this->call(DiagnosticoSeeder::class);
+        $this->call(RoleSeeder::class);
+        $this->call(TipoNotificacionSeeder::class);
+        $this->call(EspecialidadSeeder::class);
+        $this->call(EstadoCitaSeeder::class);
 
         // User::factory(10)->create();
 
